@@ -11,6 +11,7 @@ import { useColorScheme } from '@/hooks/useColorScheme';
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
+
 export default function RootLayout() {
   const colorScheme = useColorScheme();
   const [loaded] = useFonts({
@@ -32,6 +33,10 @@ export default function RootLayout() {
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
+        <Stack.Screen name="/other/hire" />
+        <Stack.Screen name="explore/project" options={{ headerTitle : 'Project Siswa RPL' }} />
+        <Stack.Screen name="explore/siswa" options={{ headerTitle : 'Daftar Siswa RPL' }} />
+        <Stack.Screen name="explore/siswaDesc" options={{ headerTitle: 'Siswa Detail' }} />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>
